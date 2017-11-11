@@ -68,4 +68,7 @@ def cart():
 @error(404)
 def e(err):
     return "Þessi síða er ekki til"
-run(app=app)#þessi aðeins öðruvísi...
+if os.environ.get("IS_HEROKU") is not None:
+    run(host="0.0.0.0", port=os.environ.get("PORT"), app=app)
+else:
+    run(app=app)#þessi aðeins öðruvísi...
