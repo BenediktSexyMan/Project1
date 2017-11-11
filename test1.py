@@ -2,6 +2,7 @@
 #2: Session minni er minni sem að endist bara jafn langt og session-ið meðan cookies endast (eiginlega) eins lengi og maður vill (eins lengi og þeim er ekki eitt)
 #3: Session ID er tala sem að vefsíða gefur einhverjum user til þess að muna efter þeim
 
+import os
 from bottle import *
 from beaker.middleware import SessionMiddleware
 
